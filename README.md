@@ -7,6 +7,7 @@
 **조영서, 백아영, 김유정**
 
 울산대학교 IT융합학부 졸업작품
+
 *Jo, Yeong-Seo et al. "Neural ODEs with Hierarchical Embeddings for Financial Forecasting." ICFICE 2025, pp. 93–96.*
 
 </div>
