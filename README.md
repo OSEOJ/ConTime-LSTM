@@ -26,7 +26,7 @@
   <img src="architecture.jpg" width="750"/>
 </p>
 
-이산 시계열을 **PCHIP(Hermite Cubic Spline)**으로 연속 경로 $X(t)$에 보간한 뒤, **Bidirectional ConTime-LSTM**에 입력한다. 각 LSTM cell은 ODE로 일반화되어 샘플별 실제 거래 간격 $\Delta t$를 RK4로 적분한다. 순방향·역방향 은닉 상태를 평균 병합(Ave)한 후 FC layer로 예측값 $\hat{Y}$를 출력하고, `DerivativeLayer`가 시간 도함수 $d\hat{Y}/dt$를 계산한다.
+이산 시계열을 PCHIP(Hermite Cubic Spline)으로 연속 경로 $X(t)$에 보간한 뒤, **Bidirectional ConTime-LSTM**에 입력한다. 각 LSTM cell은 ODE로 일반화되어 샘플별 실제 거래 간격 $\Delta t$를 RK4로 적분한다. 순방향·역방향 은닉 상태를 평균 병합(Ave)한 후 FC layer로 예측값 $\hat{Y}$를 출력하고, `DerivativeLayer`가 시간 도함수 $d\hat{Y}/dt$를 계산한다.
 
 ```
 BatchNorm → BiConTime-LSTM (RK4, steps=3) → Linear(64→64) → ELU → Dropout(0.5) → Linear(64→1) → DerivativeLayer
