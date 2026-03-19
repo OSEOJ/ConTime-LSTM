@@ -2,7 +2,7 @@
 
 # ConTime-LSTM: Continuous-Time LSTM with Neural ODE
 
-**LSTM 기반 Neural ODE를 활용한<br>연속 시간 주가 수익률 예측 및 백테스트 시스템**
+**LSTM 기반 Neural ODE를 활용한 연속 시간 주가 수익률 예측 및 백테스트 시스템**
 
 **조영서 · 김유정 · 백아영**
 
